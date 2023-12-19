@@ -1,0 +1,17 @@
+:root{
+  --primary : #100C08; 
+  --light : #FFFFF0; 
+  --red : #FF2400; 
+  --secondary : #0070FF; 
+}
+.signUpBtn {
+  background-color: var(--red) !important;
+}
+input:focus {
+  outline: var(--secondary) !important;
+  border: 2px solid var(--secondary) !important;
+  box-shadow: none !important;
+}
+  .text-danger {
+    color: var(--red) !important;
+  }

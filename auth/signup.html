@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+    crossorigin="anonymous"
+    />
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="signup.css">
+    <title>Blog App</title>
+  </head>
+  
+  <body class="d-flex justify-content-center align-items-center">
+    <div class="container">
+        <div class="row">
+            <div class="offset-md-4 col-md-4 offset-md-4">
+                <h1 class="my-5" align="center">Sign <span class="text-danger">Up</span></h1>
+                <!-- <p class="fw-bold my-3 text-danger customErr alert alert-danger"  role="alert">Error !</p> -->
+                <form id="regForm">
+                   <div class="row">
+                    <div class="col-md-6">
+                      <div class="mb-3">
+                        <label for="firstName" class="form-label"> First Name</label>
+                        <input type="text" class="form-control" id="firstName" placeholder="Enter Your Name...">
+                    </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="mb-3">
+                        <label for="lastName" class="form-label"> LastName</label>
+                        <input type="text" class="form-control" id="lastName" placeholder="Enter Your Name...">
+                    </div>
+                    </div>
+                   </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email"  placeholder="Enter Your example@gmail.com..." />
+                    </div>
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="password"  placeholder="Enter Your password..." />
+                    </div>
+                    <div class="mb-3">
+                        <label for="confPassword" class="form-label">Confirm Password</label>
+                        <input type="password" class="form-control" id="confPassword"  placeholder="Confirm password..." />
+                    </div>
+                    <button type="submit" class="btn btn-danger text-light mb-3 col-md-12 signUpBtn">Sign Up</button>
+                    <span class="my-4 mx-auto text-decoration-none">Have An Account ?<a href="./login.html"> Log in</a></span>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="../scripts/signup.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
