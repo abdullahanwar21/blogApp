@@ -15,6 +15,9 @@ body{
 nav {
     background-color: var(--primary);
     position: top-fixed !important;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
 
 }
@@ -45,14 +48,29 @@ section#hero{
     color: var(--light);
     width: 100%;
     height: 60vh;
-    
 }
+.dropdown img {
+    outline:  2px solid royalblue;
+}
+
 .createBox{
     display: flex;
     height: 100%;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+}
+.signUpbtn , .activeUser{
+    display: none;
+}
+.dropdown-toggle::after {
+    content: none;
+    position: relative;
+}
+.dropdown-menu{
+    position: absolute;
+    left: -30px !important;
+    top: 60px !important;
 }
 .createBtn {
     margin-top: 8px;
@@ -74,10 +92,13 @@ section#hero{
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
     outline: none;
     border: none;
-    /* background-color: var(--light) !important; */
 }
 .profileImg img {
     border-radius: 20px;
+    object-fit: cover;
+    height: 100px;
+    width: 100px;
+    /* object-position: center;     */
 }
 
 footer{
@@ -86,5 +107,4 @@ footer{
     padding:15px;
     text-align: center;
 }
-
 

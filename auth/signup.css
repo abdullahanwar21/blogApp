@@ -15,3 +15,16 @@ input:focus {
   .text-danger {
     color: var(--red) !important;
   }
+  .customErr{
+    display: none;
+  }
+  
+  .form-control.success{
+    outline: royalblue !important;
+    border: 2px solid royalblue !important;
+}
+
+  .form-control.failed{
+    outline: var(--red) !important;
+    border: 2px solid var(--red) !important;
+}

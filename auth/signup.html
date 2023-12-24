@@ -20,10 +20,13 @@
   <body class="d-flex justify-content-center align-items-center">
     <div class="container">
         <div class="row">
-            <div class="offset-md-4 col-md-4 offset-md-4">
-                <h1 class="my-5" align="center">Sign <span class="text-danger">Up</span></h1>
-                <!-- <p class="fw-bold my-3 text-danger customErr alert alert-danger"  role="alert">Error !</p> -->
-                <form id="regForm">
+          <div class="offset-md-4 col-md-4 offset-md-4">
+            <h1 class="my-5" align="center">Sign <span class="text-danger">Up</span></h1>
+                  <div class="allErrors fw-bold text-center text-danger"></div>
+                  <ul>
+                    </ul>
+                </p>
+                <form id="regForm" name="myForm">
                    <div class="row">
                     <div class="col-md-6">
                       <div class="mb-3">
@@ -41,12 +44,16 @@
                     <div class="mb-3">
                         <label for="email" class="form-label">Email</label>
                         <input type="email" class="form-control" id="email"  placeholder="Enter Your example@gmail.com..." />
-                    </div>
-                    <div class="mb-3">
-                        <label for="password" class="form-label">Password</label>
-                        <input type="password" class="form-control" id="password"  placeholder="Enter Your password..." />
-                    </div>
-                    <div class="mb-3">
+                      </div>
+                      <div class="mb-3">
+                          <label for="image" class="form-label">Profile Image</label>
+                          <input type="file" class="form-control" id="profileImg"  />
+                      </div>
+                      <div class="mb-3">
+                          <label for="password" class="form-label">Password</label>
+                          <input type="password" class="form-control" id="password" placeholder="Enter Your password..." />
+                      </div>
+                        <div class="mb-3">
                         <label for="confPassword" class="form-label">Confirm Password</label>
                         <input type="password" class="form-control" id="confPassword"  placeholder="Confirm password..." />
                     </div>

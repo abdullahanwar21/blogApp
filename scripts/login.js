@@ -5,7 +5,7 @@ import { auth } from "./config.js";
 const logForm = document.querySelector("#logInForm");
 const email = document.querySelector("#email");
 const password = document.querySelector("#password");
-
+const allErrors = document.querySelector(".allErrors");
 logForm.addEventListener("submit" , (e) => {
     e.preventDefault();
 
@@ -22,6 +22,7 @@ logForm.addEventListener("submit" , (e) => {
         const errorMessage = error.message;
         console.log(errorCode);
         console.log(errorMessage);
+        allErrors.innerHTML = errorMessage
     });
 });
 
