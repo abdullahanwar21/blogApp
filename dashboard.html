@@ -14,10 +14,10 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css"
     />
     <!-- sweet alert css started-->
-    <link href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css" rel="stylesheet">
-    <!-- sweet alert css ended -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@10/dist/sweetalert2.min.css">    <!-- sweet alert css ended -->
 
     <link rel="stylesheet" href="./assets/style.css" />
+    <link rel="shortcut icon" href="./assets/preicon.png" type="image/x-icon">
     <title>BloomBlog</title>
     <style>
       .text-danger {
@@ -29,33 +29,32 @@
     </style>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg" id="nav" >
+    <nav class="navbar navbar-expand-lg fixed-top" id="nav">
       <div class="container">
-        <a class="navbar-brand" href="./index.html"><h1>BloomBlog</h1></a>
-        <div class="d-flex">
-          <ul class="navbar-nav">
-            <li class="nav-item" >
-              <a href="./profile.html" class="nav-links me-3 fs-5 mt-2 btn btn-dark btn-sm text-light profileName"></a>
-            </li>
-            <li class="nav-item dropdown navbarImg">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                <img src="./assets/img1.jpg" alt="Profile" class="rounded-circle" width="40" height="40">            </a>
-              <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="./index.html">Home</a></li>
-                  <li><a class="dropdown-item" href="./profile.html">Profile</a></li>
-                  <li><a class="dropdown-item logOutBtn" href="#">Log Out</a></li>
-              </ul>
-            </li>
+        <a class="navbar-brand" href="./index.html"><h1>BloomBlog </h1></a>
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a href="./profile.html" class="nav-links me-3 fs-5 my-2 btn btn-dark btn-sm profileName"></a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <div class="navbarImg p-0"></div>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="./index.html">Home</a></li>
+              <li><a class="dropdown-item" href="./profile.html">Profile</a></li>
+            <li><a class="dropdown-item logOutBtn" href="#">Log Out</a></li>
           </ul>
-        </div>
+          </li>
+        </ul>
       </div>
-    </nav>
+    </nav> 
 
 
-    <div class="container">
+    <div class="container mt-5">
       <div class="row">
-        <h2 class="my-3 fw-bold">Dashboard</h2>
-
+        
+        <h2 class="my-3 fw-bold mt-5">Dashboard</h2>
         <div class="offset-md-2 col-md-8 offset-md-2 my-3">
             <form id="dashBoard" style="box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;">
                 <div class="mb-3">
@@ -66,17 +65,18 @@
                     id="title"
                     placeholder="Todo Title"
                     required
-                  />
-                  <span class="text-danger titleError fw-bold"></span>
-                </div>
-                <div class="mb-3">
-                  <label for="description" class="form-label"
+                    />
+                    <span class="text-danger titleError fw-bold"></span>
+                  </div>
+                  <div class="mb-3">
+                    <label for="description" class="form-label"
                     >Add Description</label
-                  >
-                  <textarea
+                    >
+                    <textarea
                     class="form-control bg-light"
                     id="description"
                     rows="3" required
+                    placeholder="Enter description e.g (100 to 3000 between)"
                   ></textarea>
                   <span class="text-danger descError fw-bold"></span>
                 </div>
@@ -98,15 +98,49 @@
         </div>
     </div>
   </section>
-   <!-- +++++++++++++++ My Blog Section ++++++++++++++++++++ -->
+   <!-- +++++++++++++++ My Blog Section Ended ++++++++++++++++++++ -->
 
+
+       <!-- User Name Update profile -->
+
+<div class="modal fade" id="editPostModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Edit <span class="text-danger">Post</span></h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="mb-3">
+          <label for="editTitle" class="form-label">Edit Title</label>
+          <input type="text" class="form-control" id="editTitle"  placeholder="Enter Your New Title..." />
+        </div>
+        <div class="mb-3">
+          <label for="editDesc" class="form-label">Edit Description</label>
+          <textarea
+          class="form-control bg-light"
+          id="editDesc"
+          rows="3" required
+          placeholder="Enter description e.g (100 to 3000 between)"
+        ></textarea>        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary saveChanges">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <!-- User Name Update profile -->
+   <script
+     src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+     integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+     crossorigin="anonymous"
+   ></script>
+   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 
    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
    <script type="module" src="./scripts/dashboard.js"></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-      crossorigin="anonymous"
-    ></script>
   </body>
 </html>

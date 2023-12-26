@@ -6,6 +6,7 @@ const logForm = document.querySelector("#logInForm");
 const email = document.querySelector("#email");
 const password = document.querySelector("#password");
 const allErrors = document.querySelector(".allErrors");
+
 logForm.addEventListener("submit" , (e) => {
     e.preventDefault();
 
@@ -13,16 +14,11 @@ logForm.addEventListener("submit" , (e) => {
     .then((userCredential) => {
         // Signed in 
         const user = userCredential.user;
-        console.log(user);
         window.location = "../dashboard.html";
         // ...
     })
     .catch((error) => {
-        const errorCode = error.code;
-        const errorMessage = error.message;
-        console.log(errorCode);
-        console.log(errorMessage);
-        allErrors.innerHTML = errorMessage
+          allErrors.innerHTML = error.message
     });
 });
 

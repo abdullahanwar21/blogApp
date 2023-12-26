@@ -19,7 +19,7 @@ nav {
     display: flex;
     justify-content: space-between;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
-
+    z-index: -1;
 }
 .navbar-brand h1 {
     color: var(--secondary);
@@ -29,7 +29,7 @@ nav {
 }
 .dropdown-menu li a {
     color: var(--secondary) !important;
-
+    
 }
 .btn-danger{
     background-color: var(--secondary) !important;
@@ -51,6 +51,11 @@ section#hero{
 }
 .dropdown img {
     outline:  2px solid royalblue;
+    object-fit: cover;
+    height: 45px;
+    width: 45px;
+    margin-top: -5px;
+    margin-left:2rem;
 }
 
 .createBox{
@@ -68,6 +73,7 @@ section#hero{
     position: relative;
 }
 .dropdown-menu{
+    z-index: 2;
     position: absolute;
     left: -30px !important;
     top: 60px !important;
@@ -94,11 +100,22 @@ section#hero{
     border: none;
 }
 .profileImg img {
-    border-radius: 20px;
+    border-radius: 50%;
+    outline: var(--primary) 2px solid;
     object-fit: cover;
     height: 100px;
     width: 100px;
-    /* object-position: center;     */
+    
+}
+.bi-pencil-square {
+    cursor: pointer;
+    margin-left: 5px !important;
+}
+.formImg img {
+    object-fit: cover;
+    height:150px;
+    width: 150px;
+    border-radius: 15px;
 }
 
 footer{
