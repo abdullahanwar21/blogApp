@@ -34,6 +34,7 @@ onAuthStateChanged(auth, async (user) => {
       activeUser.innerHTML = doc.data().fullNames;
       userName = doc.data().fullNames;
       // userUid = doc.data().uid;
+      console.log(userName);
       navbarImg.innerHTML =`<img src="${doc.data().profileUrl}" alt="Profile" class="rounded-circle" width="40" height="40">`
        ;
     });
@@ -75,7 +76,7 @@ onAuthStateChanged(auth, async (user) => {
     <img src="${item.userImg}" alt="" width="100" height="100">
     <article>
     <h2 class="card-title fw-bold mx-3 mt-5">${item.title}</h2>
-    <h5 class="card-subtitle fw-bold mx-3 mb-5" style="opacity: 0.5;">${userName} <span>${formatTimestamp(item.timestamp)}</span></h5>
+    <h5 class="card-subtitle fw-bold mx-3 mb-5" style="opacity: 0.5;">${item.userName} <span>${formatTimestamp(item.timestamp)}</span></h5>
     </div>
     <p class="card-text">${item.description}</p>                
     <a href="../allBlogs.html" class="text-decoration-none " id="seeMore">See All From This Author</a>
